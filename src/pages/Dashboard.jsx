@@ -1,6 +1,7 @@
 import About from "../components/About";
 import Home from "../components/Home";
 import Projects from "../components/Projects";
+import Services from "../components/Services";
 
 const Dashboard = () => {
     return ( 
@@ -8,6 +9,7 @@ const Dashboard = () => {
             <Home />
             <About />
             <Projects />
+            <Services />
         </div>
      );
 }

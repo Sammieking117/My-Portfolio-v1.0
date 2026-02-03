@@ -179,6 +179,9 @@ nav ul li a:is(:hover, :active){
 .projects {
   margin-top: 5rem;
 }
+/* .project-swiper {
+  padding-bottom: 40px;
+} */
 .projects h2 {
   color: var(--ACCENT);
   background: var(--MAIN-COLOR);
@@ -189,7 +192,7 @@ nav ul li a:is(:hover, :active){
 .project-row {
   display: flex;
   gap: 1rem;
-  overflow-x: auto;
+  overflow-x: visible;
 }
 .project-row::-webkit-scrollbar {
   display: none;
@@ -198,13 +201,14 @@ nav ul li a:is(:hover, :active){
   margin-top: 1.5rem;
   background: #fff;
   padding: 10px;
-  border-radius: 8px;
-  width: fit-content;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 
 }
 .project-card img {
-  width: 300px;
+  width: 100%;
   border-radius: 8px;
 }
 .project-content {
@@ -242,4 +246,19 @@ nav ul li a:is(:hover, :active){
   padding: 10px;
   color: #fff;
   background: var(--ACCENT);
+}
+.projects-pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+.projects-pagination .swiper-pagination-bullet {
+  background: transparent;
+  border: 1px solid var(--MAIN-COLOR);
+  opacity: 1;
+}
+.projects-pagination .swiper-pagination-bullet-active {
+  background: var(--MAIN-COLOR);
+  width: 15px;
+  border: 1px solid #aaa;
+  border-radius: 999px;
 }
