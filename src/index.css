@@ -262,3 +262,38 @@ nav ul li a:is(:hover, :active){
   border: 1px solid #aaa;
   border-radius: 999px;
 }
+
+.services {
+  margin-top: 5rem;
+}
+.services h2 {
+  color: var(--ACCENT);
+  background: var(--MAIN-COLOR);
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+.service-list {
+  display: grid;
+  gap: 1rem;
+  place-items: center;
+}
+.service-card {
+  background: orange;
+  width: 300px;
+  padding: 7rem 2rem 2rem;
+  border-radius: 8px;
+}
+.service-card img {
+  width: 60px;
+  background: var(--ACCENT);
+  padding: 5px;
+  border-radius: 6px;
+}
+.service-card h3 {
+  margin: 1rem 0;
+}
+.service-card p {
+  line-height: 1.5rem;
+}
