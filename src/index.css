@@ -81,7 +81,7 @@ nav ul li a:is(:hover, :active){
 /* Dashboard */
 .dashboard {
   background: var(--NEUTRAL);
-  padding: 5rem 1rem;
+  padding: 5rem 1rem 0;
   min-height: 100vh;
 }
 
@@ -296,4 +296,60 @@ nav ul li a:is(:hover, :active){
 }
 .service-card p {
   line-height: 1.5rem;
+}
+
+.contact {
+  margin-top: 5rem;
+  min-height: 80vh;
+}
+.contact h2 {
+  color: var(--ACCENT);
+  background: var(--MAIN-COLOR);
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+.contact p {
+  line-height: 1.5rem;
+  color: var(--TEXT-COLOR);
+  margin: 1.5rem 0;
+}
+.contact-icons {
+  display: flex;
+  gap: 1rem;
+}
+.contact-icons a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+  transition: transform .3s linear;
+  border: 3px solid var(--ACCENT);
+  padding: 23px;
+}
+.contact-icons a:hover {
+  background: var(--ACCENT);
+  transform: scale(120%);
+}
+.contact-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+.copyright {
+  width: 100%;
+  background: var(--MAIN-COLOR);
+  text-align: center;
+  padding: 10px;
+}
+
+.copyright p {
+  color: var(--ACCENT);
+  text-shadow: 0 0 20px black;
+  font-size: 18px;
+  font-weight: bold;
 }
