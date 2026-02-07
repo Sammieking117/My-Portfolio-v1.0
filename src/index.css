@@ -151,19 +151,19 @@ nav ul li a:is(:hover, :active){
 .about {
   margin-top: 5rem;
 }
-.about-content h2 {
+.about h2 {
   color: var(--ACCENT);
   background: var(--MAIN-COLOR);
   width: fit-content;
   padding: 5px 10px;
   border-radius: 8px;
 }
-.about-content p {
+.about-message p {
   line-height: 1.5rem;
   color: var(--TEXT-COLOR);
   margin: 1.5rem 0;
 }
-.about-content p strong {
+.about-message p strong {
   color: var(--MAIN-COLOR);
 }
 .about-img {
@@ -179,9 +179,6 @@ nav ul li a:is(:hover, :active){
 .projects {
   margin-top: 5rem;
 }
-/* .project-swiper {
-  padding-bottom: 40px;
-} */
 .projects h2 {
   color: var(--ACCENT);
   background: var(--MAIN-COLOR);
@@ -205,11 +202,40 @@ nav ul li a:is(:hover, :active){
   width: 100%;
   height: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-
+  position: relative;
+}
+.project-action {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: 300;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transition: opacity 0.25s ease,
+  transform 0.25s ease;
+  opacity: 0;
 }
 .project-card img {
   width: 100%;
   border-radius: 8px;
+  transition: .25s ease;
+}
+.project-card:hover .project-img {
+  filter: brightness(60%);
+}
+.project-card:hover .project-action {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: auto;
 }
 .project-content {
   display: flex;
@@ -263,6 +289,7 @@ nav ul li a:is(:hover, :active){
   border-radius: 999px;
 }
 
+/* Services */
 .services {
   margin-top: 5rem;
 }
@@ -276,12 +303,11 @@ nav ul li a:is(:hover, :active){
 }
 .service-list {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
-  place-items: center;
 }
 .service-card {
   background: orange;
-  width: 300px;
   padding: 7rem 2rem 2rem;
   border-radius: 8px;
 }
@@ -298,6 +324,7 @@ nav ul li a:is(:hover, :active){
   line-height: 1.5rem;
 }
 
+/* Contact */
 .contact {
   margin-top: 5rem;
   min-height: 80vh;
@@ -340,6 +367,7 @@ nav ul li a:is(:hover, :active){
   height: 30px;
 }
 
+/* Copyright */
 .copyright {
   width: 100%;
   background: var(--MAIN-COLOR);
@@ -352,4 +380,138 @@ nav ul li a:is(:hover, :active){
   text-shadow: 0 0 20px black;
   font-size: 18px;
   font-weight: bold;
+}
+
+/* Media query for tablet size */
+@media screen and (min-width: 640px) {
+  body {
+    font-size: 20px;
+  }
+  .top-bar {
+    padding: 14px 16px;
+  }
+}
+
+/* Media query for desktop size */
+@media screen and (min-width: 1024px) {
+  .top-bar {
+    height: 70px;
+    background: var(--NEUTRAL);
+  }
+  .menu-icon {
+    display: none;
+  }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .logo h2 {
+    color: var(--MAIN-COLOR);
+  }
+  nav {
+    top: -5rem;
+    left: 500px;
+    background: transparent;
+    width: 60%;
+    height: 0;
+    box-shadow: none;
+    z-index: 9999;
+    padding: 14px 16px;
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding-top: -90px;
+  }
+  nav ul li a {
+    transition: border-bottom .2s ease;
+  }
+  nav ul li a:hover {
+    background: none;
+    border-bottom: 3px solid var(--ACCENT);
+    padding-bottom: 5px;
+    border-radius: 0%;
+  }
+  .home {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+  }
+  .hero-content {
+    width: 50%;
+    margin-top: 80px;
+  }
+  .hero-section h1 {
+    font-size: 50px;
+  }
+  .hero-section h2 {
+    font-size: 35px;
+  }
+  .hero-btn button {
+    padding: 10px 20px;
+  }
+  .hero-btn button span {
+    font-size: 25px;
+  }
+  .hero-img {
+    margin: 30px;
+    border-radius: 50%;
+    height: 25rem;
+    width: 25rem;
+    position: relative;
+    overflow: hidden;
+    background: var(--NEUTRAL);
+  }
+  .hero-img::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: conic-gradient(
+      transparent 0deg,
+      var(--ACCENT) 40deg 110deg,
+      transparent 160deg
+    );
+    mask: radial-gradient(
+      farthest-side,
+      transparent calc(100% - 10px),
+      #000 0
+    );
+    animation: orbit 4s linear infinite;
+  }
+    .hero-img::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: conic-gradient(
+      transparent 0deg,
+      var(--ACCENT) 40deg 110deg,
+      transparent 160deg
+    );
+    mask: radial-gradient(
+      farthest-side,
+      transparent calc(100% - 10px),
+      #000 0
+    );
+    animation: orbit 4s linear infinite;
+    animation-delay: -1.6s;
+  }
+  @keyframes orbit {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .hero-img img {
+    object-fit: cover;
+  }
+  .about-content {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 4rem;
+    padding: 0 5rem;
+  }
+  .about-img img {
+    width: 400px;
+  }
 }

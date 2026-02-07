@@ -9,7 +9,7 @@ const Projects = () => {
     const projects = [
         {image: "/images/semgr.png", name: "Semester Manager", id: 1},
         {image: "/images/pulse.png", name: "Pulse", id: 2},
-        {image: "", name: "My Porfolio", id: 3}
+        {image: "/images/portfolio.png", name: "My Porfolio", id: 3}
     ]
 
     return ( 
@@ -43,7 +43,8 @@ const Projects = () => {
                         <SwiperSlide
                         key={project.id}>
                         <div className="project-card">
-                            <img src={project.image} />
+                            <img src={project.image} className='project-img' />
+                            <button className='project-action'>+</button>
                             <div className="project-content">
                                 <div className="project-name">
                                     <h3>{project.name}</h3>

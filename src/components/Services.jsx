@@ -8,7 +8,7 @@ const Services = () => {
         },
         {
             image: "/icons/portfolio.png",
-            name: "Portfolio & Personal Sites", 
+            name: "Portfolio Sites", 
             service: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis vel at debitis amet doloremque, laboriosam velit.", 
             id: 2
         },
