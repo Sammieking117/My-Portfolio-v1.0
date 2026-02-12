@@ -1,8 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const NavBar = () => {
+const NavBar = ({ scrollActions }) => {
     const [on, setOn] = useState(false);
+
+    const handleNavClick = (section) => {
+        scrollActions.current?.[section]?.();
+        setOn(false);
+    }
 
     return ( 
         <>
@@ -16,11 +21,16 @@ const NavBar = () => {
             </div>
             <nav className={on ? "active" : ""}>
                 <ul>
-                    <li><Link>Home</Link></li>
-                    <li><Link>About</Link></li>
-                    <li><Link>Builds</Link></li>
-                    <li><Link>Services</Link></li>
-                    <li><Link>Let's Talk</Link></li>
+                    <li><Link onClick={() =>
+                        handleNavClick("hero")}>Home</Link></li>
+                    <li><Link onClick={() =>
+                        handleNavClick("about")}>About</Link></li>
+                    <li><Link onClick={() =>
+                        handleNavClick("projects")}>Builds</Link></li>
+                    <li><Link onClick={() =>
+                        handleNavClick("services")}>Services</Link></li>
+                    <li><Link onClick={() =>
+                        handleNavClick("contact")}>Let's Talk</Link></li>
                 </ul>
             </nav>
         </>

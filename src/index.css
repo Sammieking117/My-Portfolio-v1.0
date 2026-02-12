@@ -85,6 +85,10 @@ nav ul li a:is(:hover, :active){
   min-height: 100vh;
 }
 
+section {
+  scroll-margin-top: 5rem;
+}
+
 /* Home */
 .home {
   color: var(--TEXT-COLOR);
@@ -272,6 +276,7 @@ nav ul li a:is(:hover, :active){
   padding: 10px;
   color: #fff;
   background: var(--ACCENT);
+  cursor: pointer;
 }
 .projects-pagination {
   margin-top: 2rem;
@@ -307,9 +312,14 @@ nav ul li a:is(:hover, :active){
   gap: 1rem;
 }
 .service-card {
-  background: orange;
+  background-size: cover;
+  background-position: center;
   padding: 7rem 2rem 2rem;
-  border-radius: 8px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.service-content {
+  z-index: 2;
 }
 .service-card img {
   width: 60px;
@@ -319,9 +329,11 @@ nav ul li a:is(:hover, :active){
 }
 .service-card h3 {
   margin: 1rem 0;
+  color: #fff;
 }
 .service-card p {
   line-height: 1.5rem;
+  color: #fff;
 }
 
 /* Contact */
