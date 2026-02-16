@@ -1,16 +1,13 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from "react-router-dom";
 import { Pagination, Keyboard } from 'swiper/modules';
+import { projects } from '../data/projects';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 const Projects = () => {
-    const projects = [
-        {image: "/images/semgr.png", name: "Semester Manager", id: 1},
-        {image: "/images/pulse.png", name: "Pulse", id: 2},
-        {image: "/images/portfolio.png", name: "My Porfolio", id: 3}
-    ]
+
 
     return ( 
         <div className="projects">
@@ -44,7 +41,11 @@ const Projects = () => {
                         key={project.id}>
                         <div className="project-card">
                             <img src={project.image} className='project-img' />
-                            <button className='project-action'>+</button>
+                            <Link
+                                key={project.id}
+                                to={`/project/${project.id}`}>
+                                <button className='project-action'>+</button>
+                            </Link>
                             <div className="project-content">
                                 <div className="project-name">
                                     <h3>{project.name}</h3>
@@ -53,7 +54,11 @@ const Projects = () => {
                                         <Link><button>Code</button></Link>
                                     </div>
                                 </div>
-                                <Link><button className="details-btn">→</button></Link>
+                                <Link
+                                key={project.id}
+                                to={`/project/${project.id}`}>
+                                <button className="details-btn">→</button>
+                                </Link>
                             </div>
                         </div>
                         </SwiperSlide>

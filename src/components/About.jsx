@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const About = () => {
+const About = ({ scrollToContact }) => {
     return ( 
         <div className="about">
             <h2>About Me</h2>
@@ -18,7 +18,7 @@ const About = () => {
                              Let's get to work.
                         </p>
                         <div className="hero-btn">
-                            <Link>
+                            <Link onClick={scrollToContact}>
                                 <button>
                                     <span>Get in touch →</span>
                                     <div className="liquid"></div>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Home = () => {
+const Home = ({ scrollToProjects }) => {
     return ( 
         <div className="home">
             <div className="hero-content">
@@ -14,18 +14,22 @@ const Home = () => {
                     </p>
                 </div>
                 <div className="hero-btn">
-                    <Link>
+                    <Link onClick={scrollToProjects}>
                         <button>
                             <span>View Projects</span>
                             <div className="liquid"></div>
                         </button>
                     </Link>
-                    <Link>
+                    <a
+                        href="https://github.com/Sammieking117"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <button>
                             <span>Github</span>
                             <div className="liquid"></div>
                         </button>
-                    </Link>
+                    </a>
                 </div>
             </div>
             <div className="hero-img">

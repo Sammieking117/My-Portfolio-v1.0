@@ -42,8 +42,12 @@ const Dashboard = ({ onScroll }) => {
 
     return ( 
         <div className="dashboard">
-            <section ref={heroRef}><Home /></section>
-            <section ref={aboutRef}><About /></section>
+            <section ref={heroRef}>
+                <Home scrollToProjects={() => onScroll.current?.projects()} />
+            </section>
+            <section ref={aboutRef}>
+                <About scrollToContact={() => onScroll.current?.contact()} />
+            </section>
             <section ref={projectRef}><Projects /></section>
             <section ref={serviceRef}><Services /></section>
             <section ref={contactRef}><Contact /></section>
