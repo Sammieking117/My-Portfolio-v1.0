@@ -141,6 +141,78 @@ export const projects = [
         image: "/images/portfolio.png", 
         name: "My Porfolio", 
         id: "3",
+        overview: [
+            "This portfolio website is a React-based personal platform designed to present my projects, technical decisions, and development process in a structured and professional format.",
+            "Rather than focusing purely on aesthetics, the goal was to build a clean, scalable, and well-structured application that reflects how I approach frontend architecture and user experience."
+        ],
+        role: "Frontend Developer",
+        techStack: "React, JavaScript, CSS",
+        type: "Personal Project",
+        status: "Completed",
+        problem: [
+            "Many developer portfolio prioritize visual design but fail to communicate technical depth or problem-solving ability.",
+            "I wanted to build a portfolio that: Clearly presents projects and technical decisions, demonstrates structured component design, maintains performance and readability, reflects growth and intentional learning.",
+            "The goal was clarity over flash."
+        ],
+        keyFeatures: [
+            "Clean hero section with focused value proposition",
+            "Dedicated project detail pages with technical breakdowns",
+            "Reusable layout components across sections",
+            "Smooth navigation and scroll handling",
+            "Responsive design for different screen sizes",
+            "Clear separation between presentation and logic"
+        ],
+        compStructureTop: "The application was structured into modular sections:",
+        compStructureBody: [
+            "Navigation component",
+            "Hero section",
+            "Projects preview section",
+            "Dedicated project detail pages",
+            "Footer/contact section"
+        ],
+        compStructureBottom: "Reusable layout wrappers were used to maintain consistent spacing and alignment across pages. This made the design predictable and scalable.",
+        stateManagementStrategyTop: "Client-side routing was implemented to support:",
+        stateManagementStrategyBody: [
+            "Individual project detail pages",
+            "Smooth navigation between sections",
+            "Clear URL structure for scalability"
+        ],
+        stateManagementStrategyBottom: "This ensures the portfolio behaves like a real multi-page application rather than a single static page.",
+        dataPersistenceTop: "The design prioritizes:",
+        dataPersistenceBody: [
+            "Readability over decoration",
+            "Strong typography hierarchy",
+            "Consistent spacing",
+            "Limited color palette"
+        ],
+        dataPersistenceBottom: "This approach avoids visual noise and keeps attention on the content and projects.",
+        challengesFacedBody: [
+            "Balancing simplicity with personality",
+            "Structuring project detail pages to communicate depth without overwhelming users",
+            "Maintaining consistency across sections while keeping each unique"
+        ],
+        challengesFacedBottom: "Refactoring layout components improved maintainability and reduced duplication.",
+        whatILearnedTop: "This project reinforced:",
+        whatILearnedBody: [
+            "The importance of communiication in software development",
+            "Structuring applications for scalability",
+            "Designing with clarity and hierarchy",
+            "Writing about technical decisions effectively"
+        ],
+        whatILearnedBottom: "It highlighted that presentation and engineering should work together.",
+        futureImprovementsTop: "If extended further, I would:",
+        futureImprovementsBody: [
+            "Add backend integration for a blog or dynamic project updates",
+            "Implement performance optimization techniques such as lazy loading",
+            "Improve accessibility compliance",
+            "Add analytics to track user interaction"
+        ],
+        liveLinks: "",
+    },/*
+    {
+        image: "", 
+        name: "", 
+        id: "",
         overview: [],
         role: "",
         techStack: "",
@@ -165,5 +237,5 @@ export const projects = [
         futureImprovementsTop: "",
         futureImprovementsBody: [],
         liveLinks: "",
-    }
+    }*/
 ]
