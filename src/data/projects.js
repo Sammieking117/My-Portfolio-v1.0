@@ -65,7 +65,7 @@ export const projects = [
             "Add unit testing for GPA calculation logic",
             "Improve perfomance optimization for larger datasets"
         ],
-        liveLinks: "",
+        liveLinks: "https://semester-manager.vercel.app/",
     },
     {
         image: "/images/pulse.png",
@@ -135,7 +135,7 @@ export const projects = [
             "Introduce global state management for better track synchronization",
             "Optimize rendering performance for large data sets"
         ],
-        liveLinks: "",
+        liveLinks: "https://pulse-henna-seven.vercel.app/",
     },
     {
         image: "/images/portfolio.png", 
@@ -208,6 +208,7 @@ export const projects = [
             "Add analytics to track user interaction"
         ],
         liveLinks: "",
+        isCurrentSite: true,
     },/*
     {
         image: "", 

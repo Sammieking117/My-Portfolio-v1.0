@@ -98,10 +98,24 @@ const ProjectDetails = () => {
                 </ul>
             </div>
             <div className="live-links">
-                <button>
-                    <span>Live Demo</span>
-                    <div className="liquid"></div>
-                </button>
+                {!project.isCurrentSite && (
+                    <a
+                        href={project.liveLinks}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <button>
+                            <span>Live Demo</span>
+                            <div className="liquid"></div>
+                        </button>
+                    </a>
+                )}
+
+                {project.isCurrentSite && (
+                    <span className="current-site-note">
+                        You're currently viewing the live site.
+                    </span>
+                )}
                 <button>
                     <span>Source Code</span>
                     <div className="liquid"></div>

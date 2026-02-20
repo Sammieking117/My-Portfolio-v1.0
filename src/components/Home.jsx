@@ -34,6 +34,8 @@ const Home = ({ scrollToProjects }) => {
             </div>
             <div className="hero-img">
                 <img src="/images/hero-image.png" alt="Sammie King" />
+                <div className="orbit orbit1"></div>
+                <div className="orbit orbit2"></div>
             </div>
         </div>
      );

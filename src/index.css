@@ -83,6 +83,11 @@ nav ul li a:is(:hover, :active){
   background: var(--NEUTRAL);
   padding: 5rem 1rem 0;
   min-height: 100vh;
+  transition: transform .3s ease-in-out;
+  width: 100%;
+}
+.slide-right {
+  transform: translateX(250px);
 }
 
 section {
@@ -348,6 +353,11 @@ section {
   padding: .5rem 0;
   display: flex;
   gap: .5rem;
+  align-items: center;
+}
+.live-links .current-site-note {
+  color: #ff0000;
+  cursor: progress;
 }
 .live-links button {
   position: relative;
@@ -561,6 +571,30 @@ section {
     overflow: hidden;
     background: var(--NEUTRAL);
   }
+  .orbit {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top: 4px solid var(--ACCENT);
+    animation: spin 4s linear infinite;
+  }
+  .orbit1 {
+    animation-duration: 4s;
+  }
+  .orbit2 {
+    animation-duration: 6s;
+    animation-direction: reverse;
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  /* 
   .hero-img::before {
     content: "";
     position: absolute;
@@ -600,7 +634,7 @@ section {
     to {
       transform: rotate(360deg);
     }
-  }
+  } */
   .hero-img img {
     object-fit: cover;
   }
