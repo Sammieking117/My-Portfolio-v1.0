@@ -1,12 +1,10 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const NavBar = ({ scrollActions }) => {
-    const [on, setOn] = useState(false);
+const NavBar = ({ scrollActions, menuOPen, setMenuOpen }) => {
 
     const handleNavClick = (section) => {
         scrollActions.current?.[section]?.();
-        setOn(false);
+        setMenuOpen(!menuOPen);
     }
 
     return ( 
@@ -15,13 +13,13 @@ const NavBar = ({ scrollActions }) => {
                 <div className="logo">
                     <h2>Sammie<span>King</span></h2>
                 </div>
-                <div className="menu-icon" onClick={() => setOn(!on)}>
+                <div className="menu-icon" onClick={() => setMenuOpen(!menuOPen)}>
                     &#9776;
                 </div>
             </div>
-            <nav className={on ? "active" : ""}>
+            <nav className={menuOPen ? "active" : ""}>
                 <ul>
-                    <li><Link onClick={() =>
+                    <li><Link onClick={() => 
                         handleNavClick("hero")}>Home</Link></li>
                     <li><Link onClick={() =>
                         handleNavClick("about")}>About</Link></li>
