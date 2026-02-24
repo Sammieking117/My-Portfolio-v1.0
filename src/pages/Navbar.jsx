@@ -1,11 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const NavBar = ({ scrollActions, menuOPen, setMenuOpen }) => {
 
+    const navigate = useNavigate();
+    const location = useLocation();
+
     const handleNavClick = (section) => {
-        scrollActions.current?.[section]?.();
-        setMenuOpen(!menuOPen);
-    }
+        setMenuOpen(false);
+        if (location.pathname === '/') {
+            scrollActions.current?.[section]?.();
+        } else {
+            navigate('/', { state: { scrollTo: section } });
+        }
+    };
 
     return ( 
         <>
@@ -19,16 +26,16 @@ const NavBar = ({ scrollActions, menuOPen, setMenuOpen }) => {
             </div>
             <nav className={menuOPen ? "active" : ""}>
                 <ul>
-                    <li><Link onClick={() => 
-                        handleNavClick("hero")}>Home</Link></li>
-                    <li><Link onClick={() =>
-                        handleNavClick("about")}>About</Link></li>
-                    <li><Link onClick={() =>
-                        handleNavClick("projects")}>Builds</Link></li>
-                    <li><Link onClick={() =>
-                        handleNavClick("services")}>Services</Link></li>
-                    <li><Link onClick={() =>
-                        handleNavClick("contact")}>Let's Talk</Link></li>
+                    <li><a style={{cursor: 'pointer'}} onClick={() => 
+                        handleNavClick("hero")}>Home</a></li>
+                    <li><a style={{cursor: 'pointer'}} onClick={() =>
+                        handleNavClick("about")}>About</a></li>
+                    <li><a style={{cursor: 'pointer'}} onClick={() =>
+                        handleNavClick("projects")}>Builds</a></li>
+                    <li><a style={{cursor: 'pointer'}} onClick={() =>
+                        handleNavClick("services")}>Services</a></li>
+                    <li><a style={{cursor: 'pointer'}} onClick={() =>
+                        handleNavClick("contact")}>Let's Talk</a></li>
                 </ul>
             </nav>
         </>

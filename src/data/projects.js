@@ -66,6 +66,7 @@ export const projects = [
             "Improve perfomance optimization for larger datasets"
         ],
         liveLinks: "https://semester-manager.vercel.app/",
+        sourceCode: "",
     },
     {
         image: "/images/pulse.png",
@@ -136,6 +137,7 @@ export const projects = [
             "Optimize rendering performance for large data sets"
         ],
         liveLinks: "https://pulse-henna-seven.vercel.app/",
+        sourceCode: "",
     },
     {
         image: "/images/portfolio.png", 
@@ -208,6 +210,7 @@ export const projects = [
             "Add analytics to track user interaction"
         ],
         liveLinks: "",
+        sourceCode: "",
         isCurrentSite: true,
     },/*
     {
@@ -238,5 +241,6 @@ export const projects = [
         futureImprovementsTop: "",
         futureImprovementsBody: [],
         liveLinks: "",
+        sourceCode: "",
     }*/
 ]

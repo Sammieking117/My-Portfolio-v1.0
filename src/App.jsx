@@ -29,7 +29,10 @@ function App() {
                 className={`page-content ${menuOPen ? 'shift' : ''}`}
                 onClick={() => menuOPen && setMenuOpen(false)} 
               >
-                <Dashboard onScroll={scrollActions} scrollActions={scrollActions} />
+                <Dashboard 
+                  onScroll={scrollActions} 
+                  scrollActions={scrollActions} 
+                />
               </div> }
           />
           <Route path='/project/:id' element={<ProjectDetails />} />

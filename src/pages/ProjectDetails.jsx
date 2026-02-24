@@ -116,10 +116,16 @@ const ProjectDetails = () => {
                         You're currently viewing the live site.
                     </span>
                 )}
-                <button>
-                    <span>Source Code</span>
-                    <div className="liquid"></div>
-                </button>
+                <a 
+                    href={project.sourceCode}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <button>
+                        <span>Source Code</span>
+                        <div className="liquid"></div>
+                    </button>
+                </a>
             </div>
         </div>
      );
